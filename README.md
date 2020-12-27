@@ -11,7 +11,7 @@ There are many tasks to be done.
 - [ ] CMake file for Windows and MacOS (with shell scripts and bat-files for easy installs)
 
 ### File I/O 💾
-- [ ] PPM file export (image)
+- [x] PPM file export (image)
 - [ ] BPM file export (image)
 - [ ] Scene file loader
 - [ ] Scene file structure
