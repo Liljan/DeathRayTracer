@@ -2,10 +2,15 @@
 
 #include "DataTypes.h"
 
+#include <string>
+
 struct Ray;
 
 class Exporter
 {
 public:
-	static bool ExportPPM(const Ray rays[], const uint32 width, const uint32 height);
+	
+	static inline int FloatTo255(float value);
+	
+	static bool ExportPPM(const std::string& fileName, const Ray rays[], const uint32 width, const uint32 height);
 };
