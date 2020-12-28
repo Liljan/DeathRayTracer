@@ -34,7 +34,7 @@ There are many tasks to be done.
 ### Geometry 📐
 - [ ] Sphere structure
 - [ ] Triangle structure
-- [ ] Plane structure
+- [ ] Triangle structure
 - [ ] Ray vs. Sphere intersection
 - [ ] Ray vs. Tri intersection
 - [ ] Ray vs. Plane intersection
@@ -44,7 +44,7 @@ There are many tasks to be done.
 - [ ] Other implicit meshes (donuts etc.) 
 
 ### Camera 📸
-- [ ] Fov
+- [ ] Rotatable
 - [ ] Movable
 - [ ] Rotatable
 
