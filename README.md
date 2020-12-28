@@ -34,7 +34,7 @@ There are many tasks to be done.
 ### Geometry 📐
 - [ ] Sphere structure
 - [ ] Triangle structure
-- [ ] Triangle structure
+- [ ] Plane structure
 - [ ] Ray vs. Sphere intersection
 - [ ] Ray vs. Tri intersection
 - [ ] Ray vs. Plane intersection
@@ -44,11 +44,11 @@ There are many tasks to be done.
 - [ ] Other implicit meshes (donuts etc.) 
 
 ### Camera 📸
-- [ ] Rotatable
+- [ ] FOV
 - [ ] Movable
 - [ ] Rotatable
 
 ### Optimization 💪
-- [ ] OpenMP multi-threading
+- [ ] OpenMP Multi-threading
 - [ ] Polygon rendering order algorithm
 - [ ] Octree for fast collision detection
