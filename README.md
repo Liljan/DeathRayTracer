@@ -37,7 +37,7 @@ There are many tasks to be done.
 - [ ] Plane structure
 - [ ] Ray vs. Sphere intersection
 - [ ] Ray vs. Tri intersection
-- [ ] Ray vs. Plane intersection
+- [ ] Ray vs. Plane intersection
 - [ ] Abstract "Shape" structure
 - [ ] Octree for faster collision testing
 - [ ] Translatable, rotable and scalable meshes
