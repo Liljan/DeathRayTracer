@@ -3,13 +3,12 @@
 
 #include <fstream>
 
-
 inline int Exporter::FloatTo255(float value)
 {
 	return static_cast<int>(roundf(255.0f * value));
 }
 
-bool Exporter::ExportPPM(const std::string& fileName, const Ray rays[], const uint32 width, const uint32 height)
+bool Exporter::ExportPPM(const std::string& fileName, const glm::vec3 pixels[], const uint32 width, const uint32 height)
 {
 	// Todo: Add error messages
 	
@@ -35,14 +34,11 @@ bool Exporter::ExportPPM(const std::string& fileName, const Ray rays[], const ui
 	{
 		for(int i = 0; i < width; ++i)
 		{
-			// Temporary format testing.
-			auto r = float(i) / (width - 1);
-			auto g = float(j) / (height - 1);
-			auto b = 0.25;
+			const glm::vec3& pixel = pixels[i + j * width];
 			
-			int ir = FloatTo255(r);
-			int ig = FloatTo255(g);
-			int ib = FloatTo255(b);
+			int ir = FloatTo255(pixel.r);
+			int ig = FloatTo255(pixel.g);
+			int ib = FloatTo255(pixel.b);
 
 			file << ir << ' ' << ig << ' ' << ib << '\n';
 		}
