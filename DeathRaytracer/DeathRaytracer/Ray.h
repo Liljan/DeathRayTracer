@@ -1,8 +1,11 @@
 #pragma once
 
+#include <glm/vec3.hpp>
+
 struct Ray
 {
-	float r = 0;
-	float g = 0;
-	float b = 0;
+	glm::vec3 At(float t) const { return origin + t * direction; }
+	
+	glm::vec3 origin;
+	glm::vec3 direction;
 };
