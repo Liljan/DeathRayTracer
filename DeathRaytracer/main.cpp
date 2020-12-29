@@ -12,6 +12,12 @@
 // This is our scene, temporarily
 glm::vec3 RayColor(const Ray& ray)
 {
+	Sphere sphere(Vec3(0.0f, 0.0f, 4.0f), 1.0f);
+	
+	IntersectionData hitData;
+	if(sphere.Intersection(ray, hitData))
+		return Vec3(0.9f, 0.0f, 0.0f);
+	
 	const glm::vec3& dir = glm::normalize(ray.direction);
 	
 	float t = 0.5f * (dir.y + 1.0f);
@@ -23,8 +29,6 @@ glm::vec3 RayColor(const Ray& ray)
 
 int main(int argc, const char* argv[])
 {
-	Sphere sphere(Vec3(1,2,3), 2.0f);
-	
 	const float aspectRatio = (float)Settings::WIDTH / (float)Settings::HEIGHT;
 	const float focalLength = 1.0f;
 	
