@@ -23,6 +23,13 @@ bool Sphere::Intersection(const Ray &ray, IntersectionData &hitData) const
 	if(discriminant < 0.0f)
 		return false;
 	
+	const float sqrtDiscriminant = sqrtf(discriminant);
+	
+	const float closeIntersection = (-h - sqrtDiscriminant) / a;
+	const float farIntersection = (-h + sqrtDiscriminant) / a;
+	
+	if(closeIntersection < hitData.closestDist)
+		hitData.closestDist = closeIntersection;
 	
 	return true;
 }

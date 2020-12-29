@@ -5,14 +5,14 @@
 #include "Ray.h"
 
 #include "Sphere.h"
+#include "Scene.h"
 
 #include <glm/geometric.hpp>
-
 
 // This is our scene, temporarily
 glm::vec3 RayColor(const Ray& ray)
 {
-	Sphere sphere(Vec3(0.0f, 0.0f, 4.0f), 1.0f);
+	Sphere sphere(Vec3(0.0f, 0.0f, 3.0f), 1.0f);
 	
 	IntersectionData hitData;
 	if(sphere.Intersection(ray, hitData))
@@ -29,6 +29,14 @@ glm::vec3 RayColor(const Ray& ray)
 
 int main(int argc, const char* argv[])
 {
+	Scene myScene(Vec3(0.3f, 0.3f, 0.6f));
+	
+	myScene.Add(std::make_shared<Sphere>(Vec3(0, 0, -3), 1.0f));
+	myScene.Add(std::make_shared<Sphere>(Vec3(0, 1, -3), 1.0f));
+	myScene.Add(std::make_shared<Sphere>(Vec3(0, -1, -3), 0.5f));
+	myScene.Add(std::make_shared<Sphere>(Vec3(1, 0, -3), 2.0f));
+	
+	// Set-up camera
 	const float aspectRatio = (float)Settings::WIDTH / (float)Settings::HEIGHT;
 	const float focalLength = 1.0f;
 	
